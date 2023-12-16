@@ -5,9 +5,10 @@ interface ContainerProps {
   number:any
 }
 
+
 const ExploreContainer: React.FC<ContainerProps> = ({number}) => {
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState<any>({});
   const [loadP, setLoadP] = useState(false);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const ExploreContainer: React.FC<ContainerProps> = ({number}) => {
 
                       <div className="pI-container"> 
                           <p className="pIC-title">Weight</p>
-                          <p className="pIC-data">{data.weight} pound</p>
+                          <p className="pIC-data">{data.weight || ''} pound</p>
                       </div>
 
                       <div className="pI-container"> 
